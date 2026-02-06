@@ -4,6 +4,9 @@
 <meta charset="UTF-8">
 <title>Vikesh Portfolio</title>
 
+<!-- Font Awesome Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
 <style>
 /* ===== GLOBAL ===== */
 *{
@@ -21,7 +24,6 @@ body{
     color:#fff;
 }
 
-/* Animated background */
 @keyframes bgMove{
     0%{background-position:0% 50%;}
     50%{background-position:100% 50%;}
@@ -32,7 +34,6 @@ body{
 header{
     text-align:center;
     padding:3rem 0;
-    position:relative;
 }
 
 .profile-picture{
@@ -55,10 +56,6 @@ header h1{
     font-size:2.8rem;
 }
 
-header p{
-    opacity:0.9;
-}
-
 /* ===== NAV ===== */
 nav{
     background:rgba(0,0,0,0.6);
@@ -79,7 +76,6 @@ nav a{
     color:#fff;
     text-decoration:none;
     font-weight:600;
-    transition:0.3s;
 }
 
 nav a:hover{
@@ -89,12 +85,6 @@ nav a:hover{
 /* ===== SECTIONS ===== */
 section{
     padding:2rem;
-    animation: fadeUp 1s ease forwards;
-}
-
-@keyframes fadeUp{
-    from{opacity:0; transform:translateY(40px);}
-    to{opacity:1; transform:translateY(0);}
 }
 
 .section-content{
@@ -103,17 +93,34 @@ section{
     border-radius:20px;
     padding:2rem;
     box-shadow:0 20px 40px rgba(0,0,0,0.4);
+}
+
+/* ===== SKILLS ICON STYLE ===== */
+.skills-grid{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px,1fr));
+    gap:20px;
+    margin-top:20px;
+}
+
+.skill-card{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    padding:15px;
+    background: rgba(0,0,0,0.3);
+    border-radius:15px;
     transition:0.4s;
-    transform-style: preserve-3d;
 }
 
-.section-content:hover{
-    transform: rotateY(5deg) rotateX(5deg) scale(1.03);
+.skill-card i{
+    font-size:26px;
+    color:#00f2ff;
 }
 
-/* ===== LIST ===== */
-ul{
-    padding-left:20px;
+.skill-card:hover{
+    transform: scale(1.1);
+    background: rgba(0,242,255,0.2);
 }
 
 /* ===== BUTTON ===== */
@@ -125,12 +132,6 @@ ul{
     text-decoration:none;
     border-radius:30px;
     font-weight:bold;
-    transition:0.3s;
-}
-
-.download-button:hover{
-    background:#fff;
-    transform:scale(1.1);
 }
 
 /* ===== FOOTER ===== */
@@ -153,76 +154,4 @@ footer{
 <nav>
 <ul>
     <li><a href="#about">About</a></li>
-    <li><a href="#education">Education</a></li>
-    <li><a href="#skills">Skills</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#resume">Resume</a></li>
-</ul>
-</nav>
-
-<section id="about">
-<div class="section-content">
-<h2>About Me</h2>
-<p>
-Aspiring <b>Network Engineer</b> with strong interest in networking fundamentals,
-cloud security, and cyber awareness. Passionate about troubleshooting,
-learning new technologies, and helping others stay secure online.
-</p>
-</div>
-</section>
-
-<section id="education">
-<div class="section-content">
-<h2>Education</h2>
-<p>Bharathidasan University – BCA, (Computer Applications)</p>
-<p>Anna University – MCA, (Computer Applications)</p>
-</div>
-</section>
-
-<section id="skills">
-<div class="section-content">
-<h2>Skills</h2>
-<ul>
-<li>Cyber Security</li>
-<li>Cloud Computing</li>
-<li>IoT</li>
-<li>Python</li>
-<li>IBM Cloud</li>
-<li>AI & ML</li>
-<li>Java</li>
-<li>C++</li>
-<li>JavaScript</li>
-</ul>
-</div>
-</section>
-
-<section id="projects">
-<div class="section-content">
-<h2>Projects</h2>
-<ul>
-<li>All in One Utility</li>
-<li>IBM Cloud Security</li>
-<li>IBM Chatbot</li>
-<li>AI Chatbot</li>
-</ul>
-</div>
-</section>
-
-<section id="resume">
-<div class="section-content" style="text-align:center">
-<h2>Resume</h2>
-<a href="./vikesh resume.pdf" target="_blank" class="download-button">Download CV</a>
-</div>
-</section>
-
-<footer>
-<p>© 2026 VIKESH V</p>
-</footer>
-
-</body>
-</html>
-
-
-
-
-
+    <li><a href="#

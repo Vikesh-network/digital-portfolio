@@ -2,10 +2,9 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Vikesh Portfolio</title>
+<title>Vikesh | Portfolio</title>
 
 <style>
-/* ===== GLOBAL ===== */
 *{
     margin:0;
     padding:0;
@@ -13,56 +12,49 @@
     font-family: 'Segoe UI', sans-serif;
 }
 
+/* ===== BODY ===== */
 body{
-    min-height:100vh;
-    background: linear-gradient(-45deg,#0f2027,#203a43,#2c5364,#1e3c72);
-    background-size: 400% 400%;
-    animation: bgMove 10s ease infinite;
-    color:#fff;
-}
-
-/* Animated background */
-@keyframes bgMove{
-    0%{background-position:0% 50%;}
-    50%{background-position:100% 50%;}
-    100%{background-position:0% 50%;}
+    background: linear-gradient(135deg,#edf1f1,#e9eef3);
+    color:#1f2937;
+    overflow-x:hidden;
 }
 
 /* ===== HEADER ===== */
 header{
     text-align:center;
-    padding:3rem 0;
-    position:relative;
+    padding:4rem 1rem;
 }
 
 .profile-picture{
-    width:120px;
-    height:120px;
+    width:130px;
+    height:130px;
     border-radius:50%;
-    border:4px solid #fff;
-    object-fit:cover;
-    animation: float 3s ease-in-out infinite;
-}
-
-@keyframes float{
-    0%{transform:translateY(0);}
-    50%{transform:translateY(-10px);}
-    100%{transform:translateY(0);}
+    border:3px solid #38bdf8;
+    box-shadow:0 4px 15px rgba(0,0,0,0.2);
 }
 
 header h1{
     margin-top:1rem;
-    font-size:2.8rem;
+    font-size:3rem;
+    letter-spacing:2px;
 }
 
-header p{
-    opacity:0.9;
+header span{
+    color:#2563eb;
+}
+
+.typing{
+    font-size:1.2rem;
+    margin-top:10px;
+    color:#475569;
 }
 
 /* ===== NAV ===== */
 nav{
-    background:rgba(0,0,0,0.6);
-    backdrop-filter: blur(10px);
+    position:sticky;
+    top:0;
+    background:#141414;
+    z-index:10;
 }
 
 nav ul{
@@ -76,68 +68,99 @@ nav li{
 }
 
 nav a{
-    color:#fff;
+    color:#e5e7eb;
     text-decoration:none;
     font-weight:600;
-    transition:0.3s;
 }
 
 nav a:hover{
-    color:#00f2ff;
+    color:#38bdf8;
 }
 
-/* ===== SECTIONS ===== */
+/* ===== SECTION ===== */
 section{
+    padding:3rem 1rem;
+    display:flex;
+    justify-content:center;
+}
+
+.box{
+    width:90%;
+    max-width:900px;
+    background:#ffffff;
     padding:2rem;
-    animation: fadeUp 1s ease forwards;
+    border-radius:16px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.1);
 }
 
-@keyframes fadeUp{
-    from{opacity:0; transform:translateY(40px);}
-    to{opacity:1; transform:translateY(0);}
+/* ===== HEADINGS ===== */
+h2{
+    color:#0f172a;
+    margin-bottom:1rem;
+    border-bottom:3px solid #38bdf8;
+    display:inline-block;
+    padding-bottom:5px;
 }
 
-.section-content{
-    background: rgba(255,255,255,0.12);
-    backdrop-filter: blur(15px);
-    border-radius:20px;
-    padding:2rem;
-    box-shadow:0 20px 40px rgba(0,0,0,0.4);
-    transition:0.4s;
-    transform-style: preserve-3d;
+/* ===== SKILLS BAR ===== */
+.skill{
+    margin:12px 0;
+}
+.skill span{
+    display:block;
+    font-size:0.95rem;
+    margin-bottom:4px;
+}
+.bar{
+    height:8px;
+    background:#e5e7eb;
+    border-radius:10px;
+    overflow:hidden;
+}
+.fill{
+    height:100%;
+    background:#38bdf8;
 }
 
-.section-content:hover{
-    transform: rotateY(5deg) rotateX(5deg) scale(1.03);
+/* ===== PROJECT CARDS ===== */
+.projects{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:15px;
 }
 
-/* ===== LIST ===== */
-ul{
-    padding-left:20px;
+.card{
+    padding:1.2rem;
+    border-radius:12px;
+    background:#f9fafb;
+    border:1px solid #e5e7eb;
+    transition:0.3s;
+}
+.card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 8px 20px rgba(0,0,0,0.15);
 }
 
 /* ===== BUTTON ===== */
-.download-button{
+.btn{
     display:inline-block;
-    padding:12px 25px;
-    background:#00f2ff;
-    color:#000;
-    text-decoration:none;
+    margin-top:15px;
+    padding:12px 30px;
     border-radius:30px;
+    background:#2563eb;
+    color:#ffffff;
     font-weight:bold;
-    transition:0.3s;
+    text-decoration:none;
 }
-
-.download-button:hover{
-    background:#fff;
-    transform:scale(1.1);
+.btn:hover{
+    background:#080808;
 }
 
 /* ===== FOOTER ===== */
 footer{
     text-align:center;
     padding:1rem;
-    background:rgba(0,0,0,0.6);
+    color:#6b7280;
 }
 </style>
 </head>
@@ -145,100 +168,103 @@ footer{
 <body>
 
 <header>
-    <img src="./VIKESH PHOTO - Copy.jpeg" class="profile-picture">
-    <h1>VIKESH V</h1>
-    <p>Bachelor of Computer Applications</p>
+<img src="./VIKESH PHOTO - Copy.jpeg" class="profile-picture">
+<h1>VIKESH <span>V</span></h1>
+<p class="typing">Aspiring Network Engineer | Cyber Security Enthusiast</p>
 </header>
 
 <nav>
 <ul>
-    <li><a href="#about">About</a></li>
-    <li><a href="#education">Education</a></li>
-    <li><a href="#skills">Skills</a></li>
-    <li><a href="#Strength">Strength</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#resume">Resume</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#education">Education</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#strength">Strength</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#resume">Resume</a></li>
 </ul>
 </nav>
 
 <section id="about">
-<div class="section-content">
+<div class="box">
 <h2>About Me</h2>
 <p>
-Aspiring <b>Network Engineer</b> with strong interest in networking fundamentals,
-cloud security, and cyber awareness. Passionate about troubleshooting,
-learning new technologies, and helping others stay secure online.
+Aspiring <b>Network Engineer</b> with strong knowledge in networking fundamentals,
+cloud platforms, and cyber security. Passionate about solving technical issues,
+learning emerging technologies, and building secure digital solutions.
 </p>
 </div>
 </section>
 
 <section id="education">
-<div class="section-content">
+<div class="box">
 <h2>Education</h2>
-<p>Bharathidasan University – BCA, (Computer Applications)</p>
-<p>Anna University – MCA, (Computer Applications)</p>
+<p><b>BCA</b> – Bharathidasan University</p>
+<p><b>MCA</b> – Anna University</p>
 </div>
 </section>
 
 <section id="skills">
-<div class="section-content">
+<div class="box">
 <h2>Skills</h2>
-<ul>
-<li>Cyber Security</li>
-<li>Cloud Computing</li>
-<li>IoT</li>
-<li>Python</li>
-<li>IBM Cloud</li>
-<li>AI & ML</li>
-<li>Java</li>
-<li>C++</li>
-<li>JavaScript</li>
-</ul>
+
+<div class="skill">
+<span>Cyber Security</span>
+<div class="bar"><div class="fill" style="width:85%"></div></div>
+</div>
+
+<div class="skill">
+<span>Cloud Computing (IBM Cloud)</span>
+<div class="bar"><div class="fill" style="width:80%"></div></div>
+</div>
+
+<div class="skill">
+<span>Python & Java</span>
+<div class="bar"><div class="fill" style="width:75%"></div></div>
+</div>
+
+<div class="skill">
+<span>AI & ML</span>
+<div class="bar"><div class="fill" style="width:70%"></div></div>
+</div>
+
 </div>
 </section>
-    
-<section id="Strength">
-<div class="section-content">
+
+<section id="strength">
+<div class="box">
 <h2>Strength</h2>
 <ul>
-<li>Hardware and Software analytics</li>
-<li>Video and Photo editing</li>
-<li>HandlingTechnical issues</li>
-<li>Good leader and motivating</li>
-<li>IBM Cloud</li>
-<li>AI & ML</li>
-<li>Java</li>
-<li>C++</li>
-<li>JavaScript</li>
+<li>Strong problem-solving and analytical thinking</li>
+<li>Good leadership and teamwork skills</li>
+<li>Quick learner with adaptability to new technologies</li>
+<li>Hardware & software troubleshooting ability</li>
+<li>Effective communication skills</li>
 </ul>
 </div>
 </section>
 
 <section id="projects">
-<div class="section-content">
+<div class="box">
 <h2>Projects</h2>
-<ul>
-<li>All in One Utility</li>
-<li>IBM Cloud Security</li>
-<li>IBM Chatbot</li>
-<li>AI Chatbot</li>
-</ul>
+<div class="projects">
+<div class="card">All-in-One Utility Application</div>
+<div class="card">IBM Cloud Security System</div>
+<div class="card">IBM Chatbot</div>
+<div class="card">AI-Based Chatbot</div>
+</div>
 </div>
 </section>
 
 <section id="resume">
-<div class="section-content" style="text-align:center">
+<div class="box" style="text-align:center">
 <h2>Resume</h2>
-<a href="./crime resume.pdf" target="_blank" class="download-button">Download CV</a>
+<a href="./crime resume.pdf" class="btn" target="_blank">Download CV</a>
 </div>
 </section>
 
 <footer>
-<p>© 2026 VIKESH V</p>
+© 2026 Vikesh V | Portfolio
 </footer>
 
 </body>
 </html>
-
-
-
